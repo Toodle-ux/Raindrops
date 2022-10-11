@@ -13,6 +13,13 @@ public class FloorTarget : MonoBehaviour
 
     private int _timesHit;
 
+    private void Start()
+    {
+        AudioSource.Play();
+        AudioSource.volume = 0;
+        AudioSource.loop = true;
+    }
+
     public FloorTarget(GameObject visualObject, TextMeshPro stepNumberText)
     {
         VisualObject = visualObject;
@@ -26,9 +33,20 @@ public class FloorTarget : MonoBehaviour
             Hit();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ball"))
+        {
+            AudioSource.volume = 0;
+        }
+    }
+
     public void Hit()
     {
-        PositiveFeedback();
+        //PositiveFeedback();
+        AudioSource.volume = 0.5f;
+        AudioSource.pitch = (Random.Range(0.6f, 1.2f));
+
     }
 
     public void PositiveFeedback()
