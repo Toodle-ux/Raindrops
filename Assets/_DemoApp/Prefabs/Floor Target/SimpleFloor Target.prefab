@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 7047632535904357243}
   - component: {fileID: 2666367876624885716}
   - component: {fileID: 7047632535904357242}
+  - component: {fileID: 2214090176320481024}
   m_Layer: 8
   m_Name: SimpleFloor Target
   m_TagString: Untagged
@@ -240,6 +241,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2214090176320481024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047632535904357244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe84d31fa620c7f4b9bf09d4d7dfb97e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SmoothDownRate: 0
+  _Scalar: 1
+  _DrawGizmos: 0
+  _FreqBands8: []
+  _FreqBands64: []
+  _Listener: {fileID: 0}
 --- !u!1001 &7613728485670397023
 PrefabInstance:
   m_ObjectHideFlags: 0
