@@ -1088,10 +1088,6 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 65f2eb17110044bce9bc3074fa1ca217, type: 3}
-    - target: {fileID: 0}
-      propertyPath: _Listener
-      value: 
-      objectReference: {fileID: 536018931}
     - target: {fileID: 4818703330462713633, guid: a159985dc4f72aa48be07a244167b564, type: 3}
       propertyPath: m_Size.y
       value: 10
@@ -1451,10 +1447,6 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 65f2eb17110044bce9bc3074fa1ca217, type: 3}
-    - target: {fileID: 0}
-      propertyPath: _Listener
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4818703330462713633, guid: a159985dc4f72aa48be07a244167b564, type: 3}
       propertyPath: m_Size.y
       value: 10
@@ -1693,6 +1685,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 490b5c15613d5664a929f39f00bc0bec, type: 3}
+--- !u!1 &2119376870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119376872}
+  - component: {fileID: 2119376871}
+  m_Layer: 0
+  m_Name: VisualObejectsArry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2119376871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119376870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6806ca0b868cfb48b4e683fab8f065b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FFT: {fileID: 536018930}
+  _FreqBands: 64
+  _ObjectToSpawn: {fileID: 2139524238524092090, guid: 4b31f2b0d15c0e14c832a8c20d02564e, type: 3}
+  _Shape: 0
+  _Spacing: 1
+  _ScaleStrength: {x: 0, y: 1, z: 0}
+  _EmissionCol: {r: 1, g: 1, b: 1, a: 0}
+  _EmissionStrength: 25
+--- !u!4 &2119376872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119376870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.594, y: -0.008549999, z: -1.796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2140595254
 Mesh:
   m_ObjectHideFlags: 0
