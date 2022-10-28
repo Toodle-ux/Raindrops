@@ -15,9 +15,9 @@ public class FloorTarget : MonoBehaviour
 
     private void Start()
     {
+        // the audio source starts to loop at the beginning, but the volume is set to 0
         AudioSource.Play();
         AudioSource.volume = 0;
-        //AudioSource.pitch = 5;
         AudioSource.loop = true;
     }
 
@@ -44,19 +44,27 @@ public class FloorTarget : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //if the ball enters 
         if (other.gameObject.CompareTag("Ball"))
         {
+            //set the volume to 1
+            //the sound isn't paused when the ball leaves, it's just muted
             AudioSource.volume = 1f;
+
+            // get the position of the ball
             Transform ballTransform = other.transform;
             float ballY = ballTransform.position.y;
+
+            // the pitch of the audio source is set according to the height of the ball
             AudioSource.pitch = 0.3f + 0.3f * ballY;
-            //AudioSource.pitch = (Random.Range(1, 10));
+
             Debug.Log(AudioSource.pitch);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        // if the ball leaves, mute the sound
         if (other.gameObject.CompareTag("Ball"))
         {
             AudioSource.volume = 0;
@@ -85,10 +93,5 @@ public class FloorTarget : MonoBehaviour
         // make a sound
         AudioSource.pitch = (Random.Range(0.6f, 1.2f));
         AudioSource.Play();
-    }
-
-    private void Update()
-    {
-        Debug.Log(AudioSource.pitch);
     }
 }
