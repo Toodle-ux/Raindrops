@@ -11,6 +11,7 @@ public class FrequencyBandAnalyser : MonoBehaviour
         SixtyFour = 64,
     }
 
+    public GetSpectrumDataExample _Listener;
 
     //AudioSource _AudioSource;
     int _FrequencyBins = 512;
@@ -28,7 +29,7 @@ public class FrequencyBandAnalyser : MonoBehaviour
     [HideInInspector]
     public float[] _FreqBands64;
     
-    public GetSpectrumDataExample _Listener;
+    
 
 
     // Start is called before the first frame update

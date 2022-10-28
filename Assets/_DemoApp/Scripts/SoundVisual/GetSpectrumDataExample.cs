@@ -6,7 +6,7 @@ using UnityEngine.Experimental.AI;
 [RequireComponent(typeof(AudioListener))]
 public class GetSpectrumDataExample : MonoBehaviour
 {
-    private float[] spectrum = new float[256];
+    private float[] spectrum = new float[512];
     void Update()
     {
         AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
