@@ -58,7 +58,7 @@ public class FloorTarget : MonoBehaviour
             // the pitch of the audio source is set according to the height of the ball
             AudioSource.pitch = 0.3f + 0.3f * ballY;
 
-            Debug.Log(AudioSource.pitch);
+            //Debug.Log(AudioSource.pitch);
         }
     }
 
