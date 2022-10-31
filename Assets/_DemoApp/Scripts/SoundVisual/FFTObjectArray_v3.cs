@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectArry : MonoBehaviour
+public class FFTObjectArray_v3 : MonoBehaviour
 {
     public enum Shape
     {
