@@ -11,10 +11,13 @@ public class FloorTarget : MonoBehaviour
     [SerializeField]
     private AudioSource AudioSource;
 
-    [SerializeField]
-    private VideoPlayer black;
-
     private int _timesHit;
+
+    [SerializeField]
+    private GameObject black;
+
+    [SerializeField]
+    private GameObject white;
 
     private void Start()
     {
@@ -23,8 +26,6 @@ public class FloorTarget : MonoBehaviour
         AudioSource.volume = 0;
         AudioSource.loop = true;
 
-        black.Play();
-        black.isLooping = true;
     }
 
     public FloorTarget(GameObject visualObject, TextMeshPro stepNumberText)
@@ -68,6 +69,14 @@ public class FloorTarget : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ball"))
+        {
+            white.SetActive(true);
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         // if the ball leaves, mute the sound
@@ -75,6 +84,8 @@ public class FloorTarget : MonoBehaviour
         {
             AudioSource.volume = 0;
         }
+
+        white.SetActive(false);
     }
 
     public void Hit()
