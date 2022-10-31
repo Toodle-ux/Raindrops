@@ -1,15 +1,18 @@
 ﻿using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.Video;
 
 public class FloorTarget : MonoBehaviour
 {
     [SerializeField]
     private GameObject VisualObject;
-    [SerializeField]
-    private TextMeshPro StepNumberText;
+    
     [SerializeField]
     private AudioSource AudioSource;
+
+    [SerializeField]
+    private VideoPlayer black;
 
     private int _timesHit;
 
@@ -19,12 +22,15 @@ public class FloorTarget : MonoBehaviour
         AudioSource.Play();
         AudioSource.volume = 0;
         AudioSource.loop = true;
+
+        black.Play();
+        black.isLooping = true;
     }
 
     public FloorTarget(GameObject visualObject, TextMeshPro stepNumberText)
     {
         VisualObject = visualObject;
-        StepNumberText = stepNumberText;
+        //StepNumberText = stepNumberText;
     }
 
     /*private void OnTriggerEnter(Collider other)
@@ -79,7 +85,7 @@ public class FloorTarget : MonoBehaviour
 
     }
 
-    public void PositiveFeedback()
+    /*public void PositiveFeedback()
     {
         _timesHit++;
 
@@ -93,5 +99,5 @@ public class FloorTarget : MonoBehaviour
         // make a sound
         AudioSource.pitch = (Random.Range(0.6f, 1.2f));
         AudioSource.Play();
-    }
+    }*/
 }

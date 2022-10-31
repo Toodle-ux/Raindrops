@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleFloor Target
       objectReference: {fileID: 0}
+    - target: {fileID: 7047632535904357244, guid: a159985dc4f72aa48be07a244167b564, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a159985dc4f72aa48be07a244167b564, type: 3}
 --- !u!4 &73270016 stripped
@@ -357,6 +361,71 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &744501167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744501168}
+  - component: {fileID: 744501169}
+  m_Layer: 8
+  m_Name: Video Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &744501168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744501167}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1959362147}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &744501169
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744501167}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 28ea5d8e117164a81a1bd583bcbc3300, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &859969890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -419,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 7047632535904357244, guid: a159985dc4f72aa48be07a244167b564, type: 3}
       propertyPath: m_Name
       value: SimpleFloor Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047632535904357244, guid: a159985dc4f72aa48be07a244167b564, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a159985dc4f72aa48be07a244167b564, type: 3}
@@ -1006,6 +1079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleFloor Target
       objectReference: {fileID: 0}
+    - target: {fileID: 7047632535904357244, guid: a159985dc4f72aa48be07a244167b564, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a159985dc4f72aa48be07a244167b564, type: 3}
 --- !u!4 &1249389028 stripped
@@ -1094,7 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5f3142589f88c4ab6a7bb75c1d31cd7d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f3142589f88c4ab6a7bb75c1d31cd7d, type: 3}
@@ -1305,10 +1382,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1803427591}
     m_Modifications:
+    - target: {fileID: 269844452538114769, guid: a159985dc4f72aa48be07a244167b564, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 708353209287232786, guid: a159985dc4f72aa48be07a244167b564, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 65f2eb17110044bce9bc3074fa1ca217, type: 3}
+    - target: {fileID: 2666367876624885716, guid: a159985dc4f72aa48be07a244167b564, type: 3}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 744501169}
     - target: {fileID: 4818703330462713633, guid: a159985dc4f72aa48be07a244167b564, type: 3}
       propertyPath: m_Size.y
       value: 10
@@ -1442,6 +1527,10 @@ PrefabInstance:
     - target: {fileID: 7047632535904357244, guid: a159985dc4f72aa48be07a244167b564, type: 3}
       propertyPath: m_Name
       value: SimpleFloor Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047632535904357244, guid: a159985dc4f72aa48be07a244167b564, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a159985dc4f72aa48be07a244167b564, type: 3}
