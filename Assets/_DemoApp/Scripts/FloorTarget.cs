@@ -19,6 +19,9 @@ public class FloorTarget : MonoBehaviour
     [SerializeField]
     private GameObject white;
 
+    [SerializeField]
+    private GameObject[] walls;
+
     private void Start()
     {
         // the audio source starts to loop at the beginning, but the volume is set to 0
@@ -74,6 +77,11 @@ public class FloorTarget : MonoBehaviour
         if (other.gameObject.CompareTag("Ball"))
         {
             white.SetActive(true);
+
+            foreach(GameObject wall in walls)
+            {
+                wall.SetActive(true);
+            }
         }
     }
 
@@ -86,6 +94,11 @@ public class FloorTarget : MonoBehaviour
         }
 
         white.SetActive(false);
+
+        foreach (GameObject wall in walls)
+        {
+            wall.SetActive(false);
+        }
     }
 
     public void Hit()
