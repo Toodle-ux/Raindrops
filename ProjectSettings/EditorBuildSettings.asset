@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_DemoApp/Scenes/Base Scenes/ClusterRender.unity
     guid: bc9f45b952e47434e89c3236bcdf4b0a
   - enabled: 1
-    path: Assets/_DemoApp/Scenes/Demo Scenes/ReactiveGrids.unity
+    path: Assets/_DemoApp/Scenes/Demo Scenes/Analyzer.unity
     guid: 12aa371048207dd49b75ea8249aea32c
   - enabled: 0
     path: Assets/_DemoApp/Scenes/Demo Scenes/Splat.unity
