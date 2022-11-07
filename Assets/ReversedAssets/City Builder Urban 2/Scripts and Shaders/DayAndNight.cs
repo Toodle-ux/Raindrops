@@ -17,6 +17,7 @@ public class DayAndNight : MonoBehaviour
     public Color FogNight;
     public Color FogDay;
 
+    public Volume volume;
     public GameObject volumeGO;
 
     public float dist;
