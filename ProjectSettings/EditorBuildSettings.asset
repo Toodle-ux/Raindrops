@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_DemoApp/Scenes/Base Scenes/StatsAndCalibration.unity
     guid: b3d1ddd74a699e04abd8c932689b2a50
+  - enabled: 1
+    path: Assets/_DemoApp/Scenes/Demo Scenes/World.unity
+    guid: 67cb507e9050d1e418e992382ad7e9b5
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6ecc73b016925134b9c98863934d76e1, type: 2}

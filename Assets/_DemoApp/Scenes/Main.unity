@@ -547,6 +547,7 @@ MonoBehaviour:
   - ClusterRender
   - GameRoom
   - Calibration
+  - World
   ContentScenesNames:
   - ReactiveGrids
 --- !u!4 &1627232687
