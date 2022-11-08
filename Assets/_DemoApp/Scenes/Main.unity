@@ -432,7 +432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1135263753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 916eef277612b8540ad592d5dd41ed4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 077c367aa06d14518848d8cc85c7818c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 0}
@@ -446,6 +446,7 @@ MonoBehaviour:
   throwawayUnorderedFrames: 0
   yRotations: 3
   _trackablePrefabs:
+  - {fileID: 734038296241471693, guid: 9d3fc05285795e746bd0e4fee50a27de, type: 3}
   - {fileID: 734038296241471693, guid: 9d3fc05285795e746bd0e4fee50a27de, type: 3}
   - {fileID: 734038296241471693, guid: 9d3fc05285795e746bd0e4fee50a27de, type: 3}
 --- !u!1 &1461825480
