@@ -11,8 +11,6 @@ public class FloorTarget : MonoBehaviour
     [SerializeField]
     private AudioSource AudioSource;
 
-    private int _timesHit;
-
     [SerializeField]
     private GameObject black;
 
@@ -22,6 +20,11 @@ public class FloorTarget : MonoBehaviour
     [SerializeField]
     private GameObject[] walls;
 
+    [SerializeField]
+    private GameObject nextRaindrop;
+
+    private RainSound rainSound;
+
     private void Start()
     {
         // the audio source starts to loop at the beginning, but the volume is set to 0
@@ -29,27 +32,14 @@ public class FloorTarget : MonoBehaviour
         AudioSource.volume = 0;
         AudioSource.loop = true;
 
+        rainSound = GameObject.Find("RainSound").GetComponent<RainSound>();
+
     }
 
-    public FloorTarget(GameObject visualObject, TextMeshPro stepNumberText)
+    /*public FloorTarget(GameObject visualObject, TextMeshPro stepNumberText)
     {
         VisualObject = visualObject;
         //StepNumberText = stepNumberText;
-    }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        // only be triggered by an object tagged as "Ball"
-        if (other.gameObject.CompareTag("Ball"))
-        {
-            AudioSource.volume = 1f;
-            Transform ballTransform = other.transform;
-            float ballY = ballTransform.position.y;
-            Debug.Log("ballY"+ballY);
-            //AudioSource.pitch = 0.3f + ballY;
-            AudioSource.pitch = (Random.Range(0.3f,1.2f));
-            Debug.Log("pitch"+AudioSource.pitch);
-        }
     }*/
 
     private void OnTriggerStay(Collider other)
@@ -59,7 +49,7 @@ public class FloorTarget : MonoBehaviour
         {
             //set the volume to 1
             //the sound isn't paused when the ball leaves, it's just muted
-            AudioSource.volume = 1f;
+            AudioSource.volume = 3f;
 
             // get the position of the ball
             Transform ballTransform = other.transform;
@@ -68,7 +58,7 @@ public class FloorTarget : MonoBehaviour
             // the pitch of the audio source is set according to the height of the ball
             AudioSource.pitch = 0.3f + 0.3f * ballY;
 
-            Debug.Log(AudioSource.pitch);
+            //Debug.Log(AudioSource.pitch);
         }
     }
 
@@ -76,13 +66,34 @@ public class FloorTarget : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            white.SetActive(true);
+            /*white.SetActive(true);
 
             foreach(GameObject wall in walls)
             {
                 wall.SetActive(true);
+            }*/
+
+            if (nextRaindrop != null)
+            {
+                if (!nextRaindrop.activeSelf)
+                {
+                    nextRaindrop.SetActive(true);
+                    //rainSound.rain.volume = 0f;
+                    rainSound.rainVolume = rainSound.rainVolume - 0.33f;
+                    Debug.Log(rainSound.rainVolume);
+                }
+            }
+            else
+            {
+                foreach (GameObject wall in walls)
+                {
+                    wall.SetActive(true);
+                }
+                rainSound.rainVolume = rainSound.rainVolume - 0.34f;
+                Debug.Log(rainSound.rainVolume);
             }
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -93,35 +104,12 @@ public class FloorTarget : MonoBehaviour
             AudioSource.volume = 0;
         }
 
-        white.SetActive(false);
+        /*white.SetActive(false);
 
         foreach (GameObject wall in walls)
         {
             wall.SetActive(false);
-        }
+        }*/
     }
 
-    public void Hit()
-    {
-        //PositiveFeedback();
-        AudioSource.volume = 1f;
-        AudioSource.pitch = (Random.Range(0.6f, 1.2f));
-
-    }
-
-    /*public void PositiveFeedback()
-    {
-        _timesHit++;
-
-        // change color
-        var col = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
-        VisualObject.GetComponent<MeshRenderer>().material.color = col;
-
-        // update text
-        StepNumberText.text = _timesHit.ToString("D2");
-
-        // make a sound
-        AudioSource.pitch = (Random.Range(0.6f, 1.2f));
-        AudioSource.Play();
-    }*/
 }
