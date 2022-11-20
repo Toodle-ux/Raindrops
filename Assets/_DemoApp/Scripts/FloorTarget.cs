@@ -25,6 +25,9 @@ public class FloorTarget : MonoBehaviour
 
     private RainSound rainSound;
 
+    [SerializeField]
+    private GameObject raindrops;
+
     private void Start()
     {
         // the audio source starts to loop at the beginning, but the volume is set to 0
@@ -89,6 +92,9 @@ public class FloorTarget : MonoBehaviour
                 {
                     wall.SetActive(true);
                 }
+
+                raindrops.SetActive(false);
+
                 rainSound.rainVolume = rainSound.rainVolume - 0.34f;
                 Debug.Log(rainSound.rainVolume);
             }
