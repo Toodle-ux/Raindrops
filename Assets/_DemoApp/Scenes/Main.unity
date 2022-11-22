@@ -446,9 +446,9 @@ MonoBehaviour:
   throwawayUnorderedFrames: 0
   yRotations: 3
   _trackablePrefabs:
-  - {fileID: 3738367287256969295, guid: e7ddc931ed9344dc4acc9497edd47eb1, type: 3}
-  - {fileID: 3738367287256969295, guid: e7ddc931ed9344dc4acc9497edd47eb1, type: 3}
-  - {fileID: 3738367287256969295, guid: e7ddc931ed9344dc4acc9497edd47eb1, type: 3}
+  - {fileID: 3738367287256969295, guid: ab6d0a4e1dd33024495ea375549397e6, type: 3}
+  - {fileID: 3738367287256969295, guid: ab6d0a4e1dd33024495ea375549397e6, type: 3}
+  - {fileID: 3738367287256969295, guid: ab6d0a4e1dd33024495ea375549397e6, type: 3}
 --- !u!1 &1461825480
 GameObject:
   m_ObjectHideFlags: 0
