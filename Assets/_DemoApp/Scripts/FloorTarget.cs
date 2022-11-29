@@ -2,9 +2,16 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.Video;
+using UnityEngine.Audio;
+using System.Collections;
 
 public class FloorTarget : MonoBehaviour
 {
+    public AudioMixer Mixer;
+    public AudioMixerSnapshot[] Snapshots;
+    public float[] weights;
+    public int soundVolume;
+
     [SerializeField]
     private GameObject VisualObject;
     
@@ -52,7 +59,8 @@ public class FloorTarget : MonoBehaviour
         {
             //set the volume to 1
             //the sound isn't paused when the ball leaves, it's just muted
-            AudioSource.volume = 3f;
+            
+            
 
             // get the position of the ball
             Transform ballTransform = other.transform;
@@ -69,6 +77,29 @@ public class FloorTarget : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
+            switch(soundVolume)
+            {
+            case 1:
+                weights[0] = 1.0f;
+                weights[1] = 0.0f;
+                weights[2] = 0.0f;
+                Mixer.TransitionToSnapshots(Snapshots, weights, 0.5f);
+                break;
+            case 2:
+                weights[0] = 0.0f;
+                weights[1] = 1.0f;
+                weights[2] = 0.0f;
+                Mixer.TransitionToSnapshots(Snapshots, weights, 0.5f);
+                break;
+            case 3:
+                weights[0] = 0.0f;
+                weights[1] = 1.0f;
+                weights[2] = 0.0f;
+                Mixer.TransitionToSnapshots(Snapshots, weights, 0.5f);
+                break;
+            }
+            
+            AudioSource.volume = 3f;
             /*white.SetActive(true);
 
             foreach(GameObject wall in walls)
@@ -82,7 +113,7 @@ public class FloorTarget : MonoBehaviour
                 {
                     nextRaindrop.SetActive(true);
                     //rainSound.rain.volume = 0f;
-                    rainSound.rainVolume = rainSound.rainVolume - 0.33f;
+                    //rainSound.rainVolume = rainSound.rainVolume - 0.33f;
                     Debug.Log(rainSound.rainVolume);
                 }
             }
