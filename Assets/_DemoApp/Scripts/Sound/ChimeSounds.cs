@@ -7,6 +7,9 @@ public class ChimeSounds : MonoBehaviour
     public GameObject _ObjectToSpawn;
     GameObject[] _FFTGameObjects;
     public float _Spacing = 1;
+    AudioSource m_MyAudioSource;
+    string FileNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +32,22 @@ public class ChimeSounds : MonoBehaviour
 
                 _FFTGameObjects[i] = newFFTObject;
             }
+            //   AudioSource audioSource;
+            // public string fileNumber[i];
+            // for(int i=0; i<30; i++){
+            //     string stringName =  "Aqua" + " " " + i + " " ";
+            //     fileNumb
+            // }
 
+        //     string fileNumber = new FileNumber<string>();
+
+        //         for (int i = 0; i < 9; i++)
+        //         {
+        //             // string pushStuff = "Aqua" + " " " + i + " " ";
+        //             fileNumber.Add("hello"+i);
+        //         }
+        //         Debug.Log(fileNumber);
+        //    m_MyAudioSource = GameObject.Find("chime").GetComponent<audioSource>();
     }
 
     // Update is called once per frame
