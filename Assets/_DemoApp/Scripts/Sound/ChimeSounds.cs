@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Random = UnityEngine.Random;
+using UnityEngine.Video;
+using UnityEngine.Audio;
+
 
 public class ChimeSounds : MonoBehaviour
 {
@@ -32,24 +37,9 @@ public class ChimeSounds : MonoBehaviour
 
                 _FFTGameObjects[i] = newFFTObject;
             }
-            //   AudioSource audioSource;
-            // public string fileNumber[i];
-            // for(int i=0; i<30; i++){
-            //     string stringName =  "Aqua" + " " " + i + " " ";
-            //     fileNumb
-            // }
-
-        //     string fileNumber = new FileNumber<string>();
-
-        //         for (int i = 0; i < 9; i++)
-        //         {
-        //             // string pushStuff = "Aqua" + " " " + i + " " ";
-        //             fileNumber.Add("hello"+i);
-        //         }
-        //         Debug.Log(fileNumber);
-        //    m_MyAudioSource = GameObject.Find("chime").GetComponent<audioSource>();
+        
+            
     }
-
     // Update is called once per frame
     void Update()
     {
