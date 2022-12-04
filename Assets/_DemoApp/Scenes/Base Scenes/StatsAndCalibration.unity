@@ -394,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 5851980940694580797, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4964211379539029759, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
