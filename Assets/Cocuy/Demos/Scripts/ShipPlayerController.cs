@@ -28,19 +28,25 @@ public class ShipPlayerController : MonoBehaviour
             if (transform.position.x > m_moveArea.bounds.max.x)
             {
                 new_pos.x = m_moveArea.bounds.min.x;
+                //Destroy(this);
+                
             }
             else if (transform.position.x < m_moveArea.bounds.min.x)
             {
                 new_pos.x = m_moveArea.bounds.max.x;
+                //Destroy(this);
             }
 
             if (transform.position.y > m_moveArea.bounds.max.y)
             {
                 new_pos.y = m_moveArea.bounds.min.y;
+                
+                //Destroy(this);
             }
             else if (transform.position.y < m_moveArea.bounds.min.y)
             {
                 new_pos.y = m_moveArea.bounds.max.y;
+                //Destroy(this);
             }
 
             transform.position = new_pos;
