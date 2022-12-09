@@ -318,6 +318,10 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[7].z
       value: 0.4472136
       objectReference: {fileID: 0}
+    - target: {fileID: 4504831223600773466, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e84a5ddf4fb846cca08ff5c95f59f1b, type: 2}
     - target: {fileID: 4504831223600773467, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -398,10 +402,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 4964211380448740140, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 34eb93c2278434489aad16f929ef016e, type: 3}
     - target: {fileID: 5851980940694580797, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5851980942389186792, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_Name
+      value: HudCamera2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851980942389186794, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: UIRenderTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: a2f4cb769e96540dc99290b53089faff, type: 2}
+    - target: {fileID: 5851980942389186795, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: a2f4cb769e96540dc99290b53089faff, type: 2}
     m_RemovedComponents:
     - {fileID: 4964211379539029759, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
@@ -431,7 +451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-191904
+  m_Name: pb_Mesh-283802
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
