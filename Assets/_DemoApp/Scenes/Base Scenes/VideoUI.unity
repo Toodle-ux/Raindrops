@@ -294,6 +294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2473647940252202788, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4504831223600773465, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -403,6 +407,10 @@ PrefabInstance:
       value: UIRoot
       objectReference: {fileID: 0}
     - target: {fileID: 4964211380448740140, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964211380448740140, guid: 78e8397ab396c364485c7339dfd92450, type: 3}
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 34eb93c2278434489aad16f929ef016e, type: 3}
@@ -451,7 +459,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-283802
+  m_Name: pb_Mesh-311872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
