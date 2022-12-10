@@ -30,11 +30,12 @@ public class ChimeSound : MonoBehaviour
             ballY= ballTransform.position.y;
             ballZ= ballTransform.position.z;
 
-
+            //instantiating the ink at the same position works
             //Instantiate(inkStart, canvas.transform);
+
+            //these 2 lines intend to instantiate the ink at the position where the ball touches floor target, but the position goes wrong
             //Instantiate(inkStart, new Vector3(ballX, inkStart.transform.position.y, inkStart.transform.position.z), Quaternion.identity, canvas.transform);
-            
-            Instantiate(inkStart, new Vector3(ballX + m_moveArea.bounds.min.x, inkStart.transform.position.y, 0f),Quaternion.identity);
+            Instantiate(inkStart, new Vector3(ballX + m_moveArea.bounds.min.x, inkStart.transform.position.y, 0f),Quaternion.identity, canvas.transform);
         }
     }
 
