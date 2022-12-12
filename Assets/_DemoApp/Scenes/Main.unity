@@ -602,6 +602,7 @@ MonoBehaviour:
   ContentScenesNames:
   - ReactiveGrids
   - VideoUI
+  PostProcessVolume: {fileID: 0}
 --- !u!4 &1627232687
 Transform:
   m_ObjectHideFlags: 0

@@ -16,6 +16,12 @@ public class Stage2TransScript : MonoBehaviour
             anim.SetBool("Stage2", true);
             //Stage2TransControl.SetTrigger("isJump");       //请看大神评论
         }
+
+       // if (Input.GetKeyDown(KeyCode.Alpha1))    //这里用按下事件]
+       // {
+       //     anim.SetBool("Stage2", false);
+       //     //Stage2TransControl.SetTrigger("isJump");       //请看大神评论
+       // }
         //else                                //这个部分是后添加的
         //{
         //    Stage2TransControl.SetBool("Stage2", true);
