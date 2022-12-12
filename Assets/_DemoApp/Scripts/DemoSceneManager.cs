@@ -2,18 +2,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using dreamcube.unity.Core.Scripts.AssetLoading;
 using dreamcube.unity.Core.Scripts.Configuration.GeneralConfig;
+using System.Collections;
 
 public class DemoSceneManager : BaseSceneManager
 {
     //should I do a check to see if the scene exists?
     public List<string> ContentScenesNames;
     private int _currentDemoSceneIndex = 0;
-    public Animator PostProcessVolume; //
-
+    // public Animator PostProcessVolume; //
+    public int SceneIndicator = 1;
+    
+    
     protected override void Start()
     {
         base.Start();
         StartCoroutine(SceneLoader.LoadSceneAsyncNamed(ContentScenesNames[_currentDemoSceneIndex]));
+        
     }
 
     private void Update()
@@ -23,12 +27,13 @@ public class DemoSceneManager : BaseSceneManager
             Debug.Log("TD Scene Manager 1 Pressed");
             LoadSceneWithIndex(0);
         }
-        else if(Input.GetKeyUp(KeyCode.Alpha2))
+        else if(SceneIndicator == 2)
         {
             Debug.Log("TD Scene Manager 2 Pressed");
             LoadSceneWithIndex(1);
-            Animator PostProcessVolume = GetComponent<Animator>();
-            PostProcessVolume.SetInteger("AnimState", 0);
+            
+            // Animator PostProcessVolume = GetComponent<Animator>();
+            // PostProcessVolume.SetInteger("AnimState", 0);
         }
   
         else if (Input.GetKeyDown(KeyCode.Z))
@@ -40,6 +45,12 @@ public class DemoSceneManager : BaseSceneManager
             Application.Quit();
         }
 
+    }
+
+    public void UpdateScene(int SceneInd)
+    {
+        SceneIndicator = SceneInd;
+        
     }
 
     private void LoadSceneWithIndex(int newDemoSceneIndex)

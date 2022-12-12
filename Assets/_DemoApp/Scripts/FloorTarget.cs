@@ -11,6 +11,7 @@ public class FloorTarget : MonoBehaviour
     // public AudioMixerSnapshot[] Snapshots;
     //private float[] weights = new float[5];
     private raindropMixer Mixer;
+    public DemoSceneManager SceneManager;
     
     private bool Soundplay ;
 
@@ -47,6 +48,9 @@ public class FloorTarget : MonoBehaviour
         AudioSource.volume = 0f;
         
         Mixer = GameObject.FindObjectOfType<raindropMixer>();
+        SceneManager = GameObject.FindObjectOfType<DemoSceneManager>();
+        
+
         rainSound = GameObject.Find("RainSound").GetComponent<RainSound>();
         volume = Mixer.soundVolume;
         if(volume==0){
@@ -108,8 +112,22 @@ public class FloorTarget : MonoBehaviour
                     //Debug.Log(rainSound.rainVolume);
                 }
             }
-            // else
-            // {
+            else
+            {
+                // IEnumerator Start()
+                // {
+                //     StartCoroutine("DoSomething", 2.0f);
+                //     yield return new WaitForSeconds(3);
+                //     StopCoroutine("DoSomething");
+                // }
+
+                // IEnumerator DoSomething()
+                // {
+                //     {
+                       SceneManager.UpdateScene(2);
+                       
+                //     }
+                // }
             //     foreach (GameObject wall in walls)
             //     {
             //         wall.SetActive(true);
@@ -119,7 +137,7 @@ public class FloorTarget : MonoBehaviour
 
             //     rainSound.rainVolume = rainSound.rainVolume - 0.34f;
             //     Debug.Log(rainSound.rainVolume);
-            // }
+            }
         }
 
     }
