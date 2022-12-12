@@ -599,9 +599,9 @@ MonoBehaviour:
   - ClusterRender
   - GameRoom
   - Calibration
-  - VideoUI
   ContentScenesNames:
   - ReactiveGrids
+  - VideoUI
 --- !u!4 &1627232687
 Transform:
   m_ObjectHideFlags: 0
