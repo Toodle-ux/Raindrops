@@ -27,13 +27,15 @@ public class DemoSceneManager : BaseSceneManager
             Debug.Log("TD Scene Manager 1 Pressed");
             LoadSceneWithIndex(0);
         }
-        else if(SceneIndicator == 2)
+        else if(Input.GetKeyUp(KeyCode.Alpha2))
         {
             Debug.Log("TD Scene Manager 2 Pressed");
             LoadSceneWithIndex(1);
-            
-            // Animator PostProcessVolume = GetComponent<Animator>();
-            // PostProcessVolume.SetInteger("AnimState", 0);
+        }
+              else if(Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            Debug.Log("TD Scene Manager 2 Pressed");
+            LoadSceneWithIndex(2);
         }
   
         else if (Input.GetKeyDown(KeyCode.Z))
