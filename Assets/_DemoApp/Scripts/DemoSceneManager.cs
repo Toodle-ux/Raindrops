@@ -8,6 +8,7 @@ public class DemoSceneManager : BaseSceneManager
     //should I do a check to see if the scene exists?
     public List<string> ContentScenesNames;
     private int _currentDemoSceneIndex = 0;
+    public Animator PostProcessVolume; //
 
     protected override void Start()
     {
@@ -26,6 +27,8 @@ public class DemoSceneManager : BaseSceneManager
         {
             Debug.Log("TD Scene Manager 2 Pressed");
             LoadSceneWithIndex(1);
+            Animator PostProcessVolume = GetComponent<Animator>();
+            PostProcessVolume.SetInteger("AnimState", 0);
         }
   
         else if (Input.GetKeyDown(KeyCode.Z))
