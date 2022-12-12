@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_DemoApp/Scenes/Base Scenes/VideoUI.unity
     guid: babf2116bec5c40ed8b55895fd6fe239
+  - enabled: 1
+    path: Assets/_DemoApp/Scenes/Base Scenes/EndingUI.unity
+    guid: 53848650d1c5f4620a97f402eeaf11d6
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6ecc73b016925134b9c98863934d76e1, type: 2}
