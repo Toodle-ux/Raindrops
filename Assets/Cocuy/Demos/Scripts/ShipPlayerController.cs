@@ -53,7 +53,7 @@ public class ShipPlayerController : MonoBehaviour
             if (transform.position.y > m_moveArea.bounds.max.y)
             {
                 new_pos.y = m_moveArea.bounds.min.y;
-                //new_pos.x = Random.Range(m_moveArea.bounds.min.x, m_moveArea.bounds.max.x);
+                new_pos.x = Random.Range(m_moveArea.bounds.min.x, m_moveArea.bounds.max.x);
                 Debug.Log("xMax: " + m_moveArea.bounds.max.x +
                     "\nxMin: " + m_moveArea.bounds.min.x +
                     "\nyMax: " + m_moveArea.bounds.max.y +
@@ -63,7 +63,7 @@ public class ShipPlayerController : MonoBehaviour
             else if (transform.position.y < m_moveArea.bounds.min.y)
             {
                 new_pos.y = m_moveArea.bounds.max.y;
-                //new_pos.x = Random.Range(m_moveArea.bounds.min.x, m_moveArea.bounds.max.x);
+                new_pos.x = Random.Range(m_moveArea.bounds.min.x, m_moveArea.bounds.max.x);
                 Debug.Log("xMax: " + m_moveArea.bounds.max.x +
                     "\nxMin: " + m_moveArea.bounds.min.x +
                     "\nyMax: " + m_moveArea.bounds.max.y +
